@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+<body>
+
+<h1>OpenData catalogs datasets count</h1>
+
+{% for row in counters %}
+  <div class="row-wrapper">
+    <div class="row-colorbar" style="background-color:{{ row.cfg.color }};width:{{ row.width }}%;"></div>
+    <div class="label-url">{{ row.title }}</div>
+    <div class="label-counter">{{ row.count }}</div>
+  </div>
+{% endfor %}
+
+</body></html>
