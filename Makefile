@@ -20,3 +20,6 @@ clean_page:
 
 clean:
 	rm -f $(TARGETS)
+
+publish: clean all
+	ghp-import -p -n ./output
